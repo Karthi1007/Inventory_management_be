@@ -13,31 +13,31 @@ const {
 const router = express.Router();
 
 router.get(
-     '/',
+     '/getall',
      authMiddleware,
      getProducts
 );
 
 router.post(
-     '/',
+     '/addProd',
      authMiddleware,
      createProduct
 );
 
 router.get(
-     '/:id',
+     '/getById/:id',
      authMiddleware,
      getProductById
 );
 
 router.put(
-     '/:id',
+     '/UpdateProd/:id',
      authMiddleware,
      updateProduct
 );
 
 router.delete(
-     '/:id',
+     '/delete/:id',
      authMiddleware,
      deleteProduct
 );

@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const authRoutes = require('./routes/auth.routes');
-// const productRoutes = require('./routes/product.routes');
+const productRoutes = require('./routes/product.routes');
 // const stockRoutes = require('./routes/stock.routes');
 
 const app = express();
@@ -23,7 +23,7 @@ app.get('/api/health', (req, res) => {
 
 /* Routes */
 app.use('/api/auth', authRoutes);
-// app.use('/api/products', productRoutes);
+app.use('/api/products', productRoutes);
 // app.use('/api/stocks', stockRoutes);
 
 
